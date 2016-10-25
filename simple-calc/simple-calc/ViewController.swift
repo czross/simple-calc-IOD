@@ -30,14 +30,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationBtnInput(_ sender: UIButton) {
-        
+        calculator.setOper(operation: sender.titleLabel!.text!)
+        resultLabel.text = calculator.retCurrentNum()
     }
     
     @IBAction func clearBtnInput(_ sender: UIButton) {
-        
+        calculator.clearAll()
+        resultLabel.text = calculator.retCurrentNum()
     }
     
     @IBAction func enterBtnInput(_ sender: AnyObject) {
+        calculator.setOper(operation: sender.titleLabel!.text!)
         resultLabel.text = ("\(calculator.results)")
     }
 

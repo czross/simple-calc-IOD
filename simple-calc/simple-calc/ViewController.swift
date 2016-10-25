@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enterBtnInput(_ sender: AnyObject) {
-        calculator.setOper(operation: sender.titleLabel!.text!)
+        calculator.setOper(operation: sender.titleLabel!?.text!)
         resultLabel.text = ("\(calculator.results)")
     }
 

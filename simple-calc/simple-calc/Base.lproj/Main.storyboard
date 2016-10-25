@@ -105,7 +105,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="fact"/>
                                 <connections>
-                                    <action selector="clearBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6W-uA-T7E"/>
+                                    <action selector="operationBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="leW-Vz-SMm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zi-a7-Kwt">
@@ -115,7 +115,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="avg"/>
                                 <connections>
-                                    <action selector="clearBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7M-DD-mMI"/>
+                                    <action selector="operationBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdY-yQ-sds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fm-nH-0n9">
@@ -212,7 +212,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="count"/>
                                 <connections>
-                                    <action selector="clearBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tN9-xt-JeA"/>
+                                    <action selector="operationBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4AT-lI-c1O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfs-GS-4vj">

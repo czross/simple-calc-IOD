@@ -42,13 +42,20 @@ class Calc {
         case "avg":
             self.results = (self.results + self.currentNum) / self.count
         case "fact":
-            for i in 1...Int.init(self.currentNum) {
-                self.results += Float.init(i)
+            print("entering fact")
+            print(self.results)
+            let top = Int.init(self.results)
+            print(top)
+            var counter = 1
+            while(counter <= top) {
+                self.results += Float.init(counter)
+                counter += 1
+                print(counter)
+                print(self.results)
             }
         default :
             print("error")
         }
-        
         self.currentNum = 0
     }
     

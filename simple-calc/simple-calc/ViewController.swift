@@ -34,11 +34,14 @@ class ViewController: UIViewController {
     @IBAction func operationBtnInput(_ sender: UIButton) {
         if (calculator.rpnOn) {
             calculator.currentOperator = (sender.titleLabel?.text!)!
+            resultLabel.text = calculator.retCurrentNum()
+            calculator.rpnStoreNums(next: calculator.currentNum)
             
         } else {
             calculator.setOper(operation: sender.titleLabel!.text!)
+            resultLabel.text = calculator.retCurrentNum()
         }
-        resultLabel.text = calculator.retCurrentNum()
+        
     }
     
     // clear button

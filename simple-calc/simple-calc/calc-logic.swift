@@ -131,7 +131,43 @@ class Calc {
     }
     
     func rpnCalculate() {
-        
+        print(self.currentOperator)
+        switch currentOperator {
+        case "=" :
+            self.results = self.currentNum
+        case "+" :
+            for num in self.rpnArray {
+                print("num in array \(num)")
+                self.results += num
+            }
+        case "-" :
+            for num in self.rpnArray {
+                self.results -= num
+            }
+        case "*" :
+            for num in self.rpnArray {
+                self.results = self.results * num
+            }
+        case "/" :
+            for num in self.rpnArray {
+                self.results = self.results / num
+            }
+        case "count":
+            for num in self.rpnArray {
+                self.results = self.results * num
+            }
+        case "avg":
+            self.results = (self.results + self.currentNum) / self.count
+        case "fact":
+            let top = Int.init(self.rpnArray[0])
+            var counter = 1
+            while(counter <= top) {
+                self.results += Float.init(counter)
+                counter += 1
+            }
+        default:
+            print("There was an error")
+        }
     }
 
 }

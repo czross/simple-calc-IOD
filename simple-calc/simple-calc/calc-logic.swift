@@ -15,6 +15,8 @@ class Calc {
     var count: Float
     var decimal: Bool
     var decimalCount: Int
+    var rpnOn: Bool
+    var rpnArray: [Float]
     
     init () {
         self.currentNum = 0.0
@@ -23,6 +25,8 @@ class Calc {
         self.count = 1
         self.decimal = false
         self.decimalCount = 0
+        self.rpnOn = false
+        self.rpnArray = []
     }
     
     func nextDigit(input: Int) {
@@ -89,10 +93,23 @@ class Calc {
         self.currentOperator = "="
         self.decimalCount = 0
         self.decimal = false
+        self.rpnArray = []
     }
     
     func retCurrentNum() -> String{
-        return String.init(self.currentNum)
+        if (self.rpnOn) {
+            var ret = ""
+            for num in self.rpnArray {
+                ret += " \(num)"
+            }
+            ret += " \(String.init(self.currentNum))"
+            if (self.currentOperator != "=") {
+                ret += self.currentOperator
+            }
+            return ret
+        } else {
+            return String.init(self.currentNum)
+        }
     }
     
     func setDecimal() {
@@ -101,6 +118,21 @@ class Calc {
         print(self.decimalCount)
     }
     
+    func rpnSetOn() {
+        self.rpnOn = true
+    }
+    
+    func rpnSetOff() {
+        self.rpnOn = false
+    }
+    
+    func rpnStoreNums(next: Float) {
+        self.rpnArray.append(next)
+    }
+    
+    func rpnCalculate() {
+        
+    }
 
 }
 

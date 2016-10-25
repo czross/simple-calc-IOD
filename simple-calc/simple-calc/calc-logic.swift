@@ -67,6 +67,10 @@ class Calc {
         self.currentOperator = "="
     }
     
+    func retCurrentNum() -> String{
+        return String.init(self.currentNum)
+    }
+    
 
 }
 

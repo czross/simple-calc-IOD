@@ -11,6 +11,7 @@ import UIKit
 let calculator = Calc()
 
 class ViewController: UIViewController {
+    @IBOutlet weak var resultLabel: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numBtnInput(_ sender: UIButton) {
+        calculator.nextDigit(input: Int.init(sender.titleLabel!.text!)!)
+        resultLabel.text = calculator.retCurrentNum()
         
     }
     
@@ -32,6 +35,10 @@ class ViewController: UIViewController {
     
     @IBAction func clearBtnInput(_ sender: UIButton) {
         
+    }
+    
+    @IBAction func enterBtnInput(_ sender: AnyObject) {
+        resultLabel.text = ("\(calculator.results)")
     }
 
 }

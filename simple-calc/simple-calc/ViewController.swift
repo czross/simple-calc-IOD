@@ -2,11 +2,13 @@
 //  ViewController.swift
 //  simple-calc
 //
-//  Created by Brian Ross on 10/24/16.
+//  Created by Chris Ross on 10/24/16.
 //  Copyright © 2016 Chris Ross. All rights reserved.
 //
 
 import UIKit
+
+let calculator = Calc()
 
 class ViewController: UIViewController {
 
@@ -20,6 +22,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func numBtnInput(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func operationBtnInput(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func clearBtnInput(_ sender: UIButton) {
+        
+    }
 
 }
 

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  simple-calc
 //
-//  Created by Brian Ross on 10/24/16.
+//  Created by Chris Ross on 10/24/16.
 //  Copyright © 2016 Chris Ross. All rights reserved.
 //
 

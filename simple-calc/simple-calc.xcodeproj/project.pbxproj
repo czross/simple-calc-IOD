@@ -14,6 +14,7 @@
 		0611802F1DBDEAD500BC4D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0611802D1DBDEAD500BC4D7B /* LaunchScreen.storyboard */; };
 		0611803A1DBDEAD600BC4D7B /* simple_calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061180391DBDEAD600BC4D7B /* simple_calcTests.swift */; };
 		061180451DBDEAD600BC4D7B /* simple_calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061180441DBDEAD600BC4D7B /* simple_calcUITests.swift */; };
+		061180531DBE9EC000BC4D7B /* calc-logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061180521DBE9EC000BC4D7B /* calc-logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		061180401DBDEAD600BC4D7B /* simple-calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		061180441DBDEAD600BC4D7B /* simple_calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calcUITests.swift; sourceTree = "<group>"; };
 		061180461DBDEAD600BC4D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		061180521DBE9EC000BC4D7B /* calc-logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "calc-logic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				061180241DBDEAD500BC4D7B /* AppDelegate.swift */,
+				061180521DBE9EC000BC4D7B /* calc-logic.swift */,
 				061180261DBDEAD500BC4D7B /* ViewController.swift */,
 				061180281DBDEAD500BC4D7B /* Main.storyboard */,
 				0611802B1DBDEAD500BC4D7B /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				061180271DBDEAD500BC4D7B /* ViewController.swift in Sources */,
+				061180531DBE9EC000BC4D7B /* calc-logic.swift in Sources */,
 				061180251DBDEAD500BC4D7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

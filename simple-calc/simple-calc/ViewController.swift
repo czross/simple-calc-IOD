@@ -43,6 +43,10 @@ class ViewController: UIViewController {
         calculator.setOper(operation: sender.titleLabel!?.text!)
         resultLabel.text = ("\(calculator.results)")
     }
+    
+    @IBAction func decimalBtnInput(_ sender: AnyObject) {
+        calculator.setDecimal()
+    }
 
 }
 

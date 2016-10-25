@@ -222,7 +222,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="numBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQ4-e2-eHI"/>
+                                    <action selector="decimalBtnInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vcp-hv-YvI"/>
                                 </connections>
                             </button>
                         </subviews>

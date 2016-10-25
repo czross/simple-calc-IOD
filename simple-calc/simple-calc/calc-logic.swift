@@ -13,16 +13,34 @@ class Calc {
     var results: Float
     var currentOperator: String
     var count: Float
+    var decimal: Bool
+    var decimalCount: Int
     
     init () {
         self.currentNum = 0.0
         self.results = 0.0
         self.currentOperator = "="
         self.count = 1
+        self.decimal = false
+        self.decimalCount = 0
     }
     
     func nextDigit(input: Int) {
-        self.currentNum = self.currentNum * 10 + Float.init(input)
+        if (self.decimal) {
+            print("decimal count \(pow(10, self.decimalCount))")
+            var power = 10
+            var count = 1
+            while (count < self.decimalCount) {
+                power = power * 10
+                count += 1
+            }
+            self.currentNum = self.currentNum + (Float.init(input) / Float.init(power))
+            print("currentNum \(self.currentNum)")
+            print("decimal count new\(power)")
+            self.decimalCount += 1
+        } else {
+            self.currentNum = self.currentNum * 10 + Float.init(input)
+        }
     }
     
     func operate() {
@@ -42,21 +60,18 @@ class Calc {
         case "avg":
             self.results = (self.results + self.currentNum) / self.count
         case "fact":
-            print("entering fact")
-            print(self.results)
             let top = Int.init(self.results)
-            print(top)
             var counter = 1
             while(counter <= top) {
                 self.results += Float.init(counter)
                 counter += 1
-                print(counter)
-                print(self.results)
             }
         default :
             print("error")
         }
         self.currentNum = 0
+        self.decimalCount = 0
+        self.decimal = false
     }
     
     func setOper(operation: String?) {
@@ -72,10 +87,18 @@ class Calc {
         self.results = 0
         self.count = 0
         self.currentOperator = "="
+        self.decimalCount = 0
+        self.decimal = false
     }
     
     func retCurrentNum() -> String{
         return String.init(self.currentNum)
+    }
+    
+    func setDecimal() {
+        self.decimal = true
+        self.decimalCount = 1
+        print(self.decimalCount)
     }
     
 

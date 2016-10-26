@@ -62,7 +62,13 @@ class Calc {
         case "count":
             self.results = count
         case "avg":
-            self.results = (self.results + self.currentNum) / self.count
+            if (self.count > 2) {
+                self.count = 2
+            }
+            self.results += self.currentNum
+            print("First results \(self.results)")
+            self.results = self.results / self.count
+            print("Second results\(results)")
         case "fact":
             let top = Int.init(self.results)
             var counter = 1
@@ -89,7 +95,7 @@ class Calc {
     func clearAll() {
         self.currentNum = 0
         self.results = 0
-        self.count = 0
+        self.count = 1
         self.currentOperator = "="
         self.decimalCount = 0
         self.decimal = false
